@@ -1,0 +1,32 @@
+# remove the giant bulky title bar from the window
+gtk-titlebar = false
+window-decoration = false
+
+# clipboard
+copy-on-select = false
+clipboard-trim-trailing-spaces = true
+clipboard-read = allow
+clipboard-write = allow
+
+# shell integration
+shell-integration = zsh
+shell-integration-features = true
+
+# systemd configuration
+quit-after-last-window-closed = true
+quit-after-last-window-closed-delay = 5m
+
+# font
+font-family = "DejaVuSansM Nerd Font Mono"
+font-size = 13
+
+# dark themes
+# theme = tokyonight
+# theme = carbonfox
+# theme = rose-pine
+# theme = 0x96f
+theme = "jr-nvim-dark"
+
+# light themes
+# theme = rose-pine-dawn
+# theme = tokyonight-day

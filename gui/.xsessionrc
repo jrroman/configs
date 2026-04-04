@@ -1,0 +1,4 @@
+#!/bin/bash
+
+feh --bg-scale /usr/share/wallpapers/homeworld_wallpaper/contents/images/3840x2160.svg
+exec xmonad
