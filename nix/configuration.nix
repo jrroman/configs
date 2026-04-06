@@ -112,6 +112,7 @@ in
       pkgs.notonoto
       pkgs.noto-fonts
       pkgs.firefox-devedition
+      pkgs.protonvpn-gui
     ];
 
     programs.git = {
@@ -213,6 +214,10 @@ in
     zig
     python314
     google-cloud-sdk
+    tshark
+    wireshark
+    traceroute
+    tcpdump
   ];
 
   environment.shells = with pkgs; [ zsh ];
