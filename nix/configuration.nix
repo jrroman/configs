@@ -46,6 +46,7 @@ in
   #   useXkbConfig = true; # use xkb.options in tty.
   # };
 
+  services.libinput.touchpad.tapping = false;
   # Enable the X11 windowing system.
   services.xserver = {
     enable = true;
@@ -281,4 +282,3 @@ in
   system.stateVersion = "25.11"; # Did you read the comment?
 
 }
-
