@@ -6,6 +6,7 @@
 
 let
   home-manager = builtins.fetchTarball https://github.com/nix-community/home-manager/archive/release-25.11.tar.gz;
+  unstable = import <nixos-unstable> { config = { allowUnfree = true; }; };
 in
 {
   imports =
@@ -114,6 +115,7 @@ in
       pkgs.noto-fonts
       pkgs.firefox-devedition
       pkgs.protonvpn-gui
+      pkgs.emacs
     ];
 
     programs.git = {
@@ -204,6 +206,7 @@ in
     llvmPackages_19.lldb
     lua
     stylua
+    luajit
     luajitPackages.lua-lsp
     luajitPackages.plenary-nvim
     luajitPackages.luarocks
@@ -219,6 +222,7 @@ in
     wireshark
     traceroute
     tcpdump
+    unstable.neovim
   ];
 
   environment.shells = with pkgs; [ zsh ];
