@@ -1,5 +1,0 @@
-require("segfvult.mappings")
-require("segfvult.options")
-require("segfvult.autocmd")
-require("segfvult.floaterm")
-require("segfvult.lazy_init")

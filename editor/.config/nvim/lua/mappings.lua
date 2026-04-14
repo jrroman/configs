@@ -7,7 +7,7 @@ local default_opts = { noremap = true, silent = true }
 
 -- Open netrw
 --vim.cmd("cabbrev E Explore")
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>pv", "<CMD>Oil<CR>")
 
 -- Remove mapping for Q which is used to quit a buffer.
 vim.keymap.set("n", "Q", "<nop>")
@@ -35,10 +35,6 @@ vim.keymap.set("x", "<leader>p", [["_dP]])
 -- Mason
 vim.keymap.set("n", "<leader>m", ":Mason<CR>", default_opts)
 
-vim.keymap.set("n", "<leader>fmt", function()
-  require("conform").format({ bufnr = 0 })
-end)
-
 -- Copy to system clipboard.
 vim.keymap.set("n", "<leader>y", '"+y', default_opts)
 vim.keymap.set("v", "<leader>y", '"+y', default_opts)
@@ -61,6 +57,12 @@ end)
 -- Quickfix
 vim.keymap.set("n", "<leader>qj", "<cmd>cnext<CR>")
 vim.keymap.set("n", "<leader>qk", "<cmd>cprev<CR>")
+
+-- Fugitive
+vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
+
+-- Undotree
+vim.keymap.set("n", "<leader>u", vim.cmd.Undotree)
 
 -- vim.keymap.set("n", "G", function()
 --   vim.cmd("normal! G")
