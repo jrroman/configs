@@ -223,6 +223,7 @@ in
     traceroute
     tcpdump
     unstable.neovim
+    helix
   ];
 
   environment.shells = with pkgs; [ zsh ];
