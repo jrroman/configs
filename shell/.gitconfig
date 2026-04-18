@@ -1,0 +1,11 @@
+[user]
+        name = jr
+        email = jrrmod@gmail.com
+[core]
+        editor = nvim
+[init]
+        defaultBranch = main
+[diff]
+    tool = nvim_difftool
+[difftool "nvim_difftool"]
+    cmd = nvim -c \"packadd nvim.difftool\" -c \"DiffTool $LOCAL $REMOTE\"
