@@ -116,6 +116,8 @@ in
       pkgs.firefox-devedition
       pkgs.protonvpn-gui
       pkgs.emacs
+      pkgs.poetry
+      pkgs.pyenv
     ];
 
     programs.git = {
@@ -173,12 +175,44 @@ in
 
   security.sudo.enable = true;
 
+  # documentation / man pages
+  documentation = {
+    man.enable = true;
+    dev.enable = true;
+    man.generateCaches = true;
+  };
+
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
   environment.systemPackages = with pkgs; [
+    man-pages
+    man-pages-posix
     vim
     wget
     gcc
+    binutils
+    gnumake
+    flex
+    bison
+    util-linux
+    e2fsprogs
+    jfsutils
+    reiserfsprogs
+    xfsprogs
+    squashfsTools
+    btrfs-progs
+    pcmciautils
+    linuxquota
+    ppp
+    nfs-utils
+    procps
+    oprofile
+    udev
+    grub2
+    mcelog
+    openssl
+    bc
+    sphinx
     dmenu
     xmobar
     tmux
@@ -196,7 +230,6 @@ in
     lm_sensors
     kubectl
     typescript-language-server
-    gnumake
     valgrind
     bear
     nodejs_24
@@ -224,6 +257,10 @@ in
     tcpdump
     unstable.neovim
     helix
+    gimp
+    pkg-config
+    net-tools
+    redshift
   ];
 
   environment.shells = with pkgs; [ zsh ];
